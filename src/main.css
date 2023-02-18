@@ -20,10 +20,9 @@ header {
   display: flex;
   justify-content: center;
   padding: 10px;
-  border: 2px solid red;
 }
 
-.search-container {
+.search-form {
   position: relative;
 }
 
@@ -43,10 +42,10 @@ input[type="text"]:focus {
 .searchBtn {
   position: absolute;
   left: 140px;
-  bottom: 5px;
   transform: scale(-1, 1);
-  width: 18px;
-  margin-left: 5px;
+
+  background-color: transparent;
+  border: none;
 }
 
 .searchBtn:hover {
@@ -123,6 +122,10 @@ main {
   font-weight: 600;
   letter-spacing: -1px;
   color: orangered;
+}
+
+.temp-block {
+  display: flex;
 }
 
 .main-temp {
@@ -207,7 +210,7 @@ main {
 }
 
 .days-imgs {
-  flex: 2.5;
+  flex: 0.9;
   display: flex;
   justify-content: center;
 }

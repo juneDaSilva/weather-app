@@ -15,10 +15,13 @@
   <body>
     <header>
 
-      <div class="search-container">
+
+      <form class="search-form" action="">
         <input id="input" type="text" placeholder="search location">
-        <img src="./images/search.svg" class="searchBtn" alt="">
-      </div>
+        <button action="submit" class="searchBtn" alt="">
+          <img src="./images/search.svg">
+        </button>
+      </form>
 
 
     </header>
@@ -36,7 +39,10 @@
           <div class="current-main">
             <div class="main-left">
               <div class="city">Paris</div>
-              <div class="main-temp">26 <span class="degree">℃</span> </div>
+              <div class="temp-block">
+                <div id='main-temp' class="main-temp">26 </div>
+                <div class="main-temp degree">℉</div>
+              </div>
               <div class="sky">partly cloudy</div>
             </div>
             <div class="main-right">
@@ -46,15 +52,15 @@
           <div class="current-details">
             <div class="details-block">
               <div class="block-title">feels like</div>
-              <div class="block-info feel">13 <span class="degree">℃</span></div>
+              <div class="block-info feel">13 <span class="degree">℉</span></div>
             </div>
             <div class="details-block">
               <div class="block-title">humidity</div>
-              <div class="block-info humidity"> 24%</div>
+              <div class="block-info humidity"> <span id="humidity">24</span>%</div>
             </div>
             <div class="details-block">
               <div class="block-title">chance of rain</div>
-              <div class="block-info rain-chance">0%</div>
+              <div class="block-info rain-chance"><span id="rain-chance">0</span>%</div>
             </div>
             <div class="details-block">
               <div class="block-title">wind speed</div>
@@ -73,7 +79,9 @@
             <div class="days-imgs">
               <img class="daily-img" src="./images/cloud-sun-fill.svg" alt="">
             </div>
-            <div class="days-temp">31<span class="degree">℃</span> </div>
+            <div class="temp-block">
+              <div class="days-temp">31 </div><span class=" days-temp degree">℉</span>
+            </div>
           </div>
           <div class="day-border"></div>
 
@@ -82,7 +90,9 @@
             <div class="days-imgs">
               <img class="daily-img" src="./images/cloud-sun-fill.svg" alt="">
             </div>
-            <div class="days-temp">28<span class="degree">℃</span></div>
+            <div class="temp-block">
+              <div class="days-temp">31 </div><span class=" days-temp degree">℉</span>
+            </div>
           </div>
           <div class="day-border"></div>
 
@@ -91,7 +101,9 @@
             <div class="days-imgs">
               <img class="daily-img" src="./images/cloud-sun-fill.svg" alt="">
             </div>
-            <div class="days-temp">26<span class="degree">℃</span></div>
+            <div class="temp-block">
+              <div class="days-temp">31 </div><span class=" days-temp degree">℉</span>
+            </div>
           </div>
           <div class="day-border"></div>
 
@@ -100,7 +112,9 @@
             <div class="days-imgs">
               <img class="daily-img" src="./images/cloud-sun-fill.svg" alt="">
             </div>
-            <div class="days-temp">23<span class="degree">℃</span></div>
+            <div class="temp-block">
+              <div class="days-temp">31 </div><span class=" days-temp degree">℉</span>
+            </div>
           </div>
           <div class="day-border"></div>
 
@@ -109,7 +123,9 @@
             <div class="days-imgs">
               <img class="daily-img" src="./images/cloud-sun-fill.svg" alt="">
             </div>
-            <div class="days-temp">24<span class="degree">℃</span></div>
+            <div class="temp-block">
+              <div class="days-temp">31 </div><span class=" days-temp degree">℉</span>
+            </div>
           </div>
           <div class="day-border"></div>
           <div class="day-block">
@@ -117,7 +133,9 @@
             <div class="days-imgs">
               <img class="daily-img" src="./images/cloud-sun-fill.svg" alt="">
             </div>
-            <div class="days-temp">20<span class="degree">℃</span></div>
+            <div class="temp-block">
+              <div class="days-temp">31 </div><span class=" days-temp degree">℉</span>
+            </div>
           </div>
           <div class="day-border"></div>
         </div>

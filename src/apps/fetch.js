@@ -1,22 +1,21 @@
+import { updateDisplay } from "./display";
+
 export function getWeather(location, key) {
-  fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${key}&units=imperial`,
-    { mode: "cors" }
-  )
-    .then((response) => {
-      return response.json();
-    })
-    .then((weatherData) => {
-      if (weatherData.message == "city not found") {
-        throw Error("city not found");
-      } else {
-        console.log(weatherData);
+  return new Promise((resolve, reject) => {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${key}&units=imperial`,
+      { mode: "cors" }
+    ).then((response) => {
+      if (response.statusText == "Not Found") {
+        reject(Error("city not found"));
       }
-    })
-    .catch((err) => {
-      if (err == "Error: city not found") {
-        console.log("met");
-      }
-      console.log(err);
+      resolve(response.json());
     });
+  });
+}
+
+export async function runSearch(location, key) {
+  let weatherData = await getWeather(location, key);
+  // console.log(weatherData);
+  updateDisplay(weatherData);
 }
