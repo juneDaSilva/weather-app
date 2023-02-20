@@ -9,6 +9,7 @@ export function getWeather(location, key) {
       if (response.statusText == "Not Found") {
         reject(Error("city not found"));
       }
+
       resolve(response.json());
     });
   });
@@ -16,6 +17,6 @@ export function getWeather(location, key) {
 
 export async function runSearch(location, key) {
   let weatherData = await getWeather(location, key);
-  // console.log(weatherData);
+
   updateDisplay(weatherData);
 }

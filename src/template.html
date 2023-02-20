@@ -33,8 +33,7 @@
         <div class="today">
           <div class="current-day">MONDAY</div>
           <div class="current-calendar">
-            <div class="calendar-date">February 21</div>
-            <div class="calendar-time"> 10:57 AM</div>
+            <div class="calendar-date"><span id="month">March</span> <span id="date">21</span></div>
           </div>
           <div class="current-main">
             <div class="main-left">
@@ -52,11 +51,14 @@
           <div class="current-details">
             <div class="details-block">
               <div class="block-title">feels like</div>
-              <div class="block-info feel">13 <span class="degree">℉</span></div>
+              <div class="temp-block">
+                <div class="block-info feel">13 </div>
+                <span class="block-info degree">℉</span>
+              </div>
             </div>
             <div class="details-block">
               <div class="block-title">humidity</div>
-              <div class="block-info humidity"> <span id="humidity">24</span>%</div>
+              <div class="block-info"> <span id="humidity">24</span>%</div>
             </div>
             <div class="details-block">
               <div class="block-title">chance of rain</div>
@@ -64,13 +66,15 @@
             </div>
             <div class="details-block">
               <div class="block-title">wind speed</div>
-              <div class="block-info wind-speed">16.7 km/h</div>
+              <div class="block-info wind-speed"><span id="wind-speed">16.7</span> <span id="speed-unit">km/h</span>
+              </div>
 
             </div>
 
 
           </div>
         </div>
+
 
         <div class="days-container">
           <div class="day-border"></div>
@@ -139,6 +143,9 @@
           </div>
           <div class="day-border"></div>
         </div>
+      </div>
+
+
 
 
       </div>

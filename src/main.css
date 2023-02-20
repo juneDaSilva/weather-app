@@ -105,6 +105,10 @@ main {
   letter-spacing: -1px;
 }
 
+#am-pm {
+  margin-left: 2px;
+}
+
 .current-main {
   display: flex;
   border-bottom: 2px solid black;
