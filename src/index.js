@@ -9,3 +9,8 @@ form.onsubmit = (e) => {
 
   e.preventDefault();
 };
+
+// TODO: find out how to get weather for whole week
+// TODO: find out the codes for icons
+// TODO: look into semantic html
+// TODO: find out how to get chance of rain
