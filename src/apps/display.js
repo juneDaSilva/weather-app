@@ -8,17 +8,16 @@ const currentDay = document.querySelector(".current-day");
 const daysName = document.querySelectorAll(".days-name");
 const month = document.getElementById("month");
 const monthDay = document.getElementById("date");
-const hour = document.getElementById("hour");
-const minutes = document.getElementById("minutes");
-const amPm = document.getElementById("am-pm");
+const pop = document.getElementById("rain-chance");
+const daysTemp = document.querySelectorAll(".daily-temp");
 
-export const updateDisplay = (weatherData) => {
-  displayDate(weatherData);
+export const updateDisplay = (weatherData, forecast) => {
+  displayDate();
   updateToday(weatherData);
+  displayForecast(forecast);
 };
 
 const updateToday = (weatherData) => {
-  console.log(weatherData);
   city.textContent = weatherData.name;
   mainTemp.textContent = Math.round(weatherData.main.temp);
   // TODO: dynamic unit measurement choice
@@ -26,10 +25,11 @@ const updateToday = (weatherData) => {
   // TODO: weather.icon ID
   feelsLike.textContent = Math.round(weatherData.main.feels_like);
   humidity.textContent = Math.round(weatherData.main.humidity);
+  // pop.textContent = weatherData.pop * 100;
   windSpeed.textContent = weatherData.wind.speed.toFixed(1);
 };
 
-const displayDate = (weatherData) => {
+const displayDate = () => {
   const weekday = [
     "SUNDAY",
     "MONDAY",
@@ -57,7 +57,6 @@ const displayDate = (weatherData) => {
 
   let date = new Date();
 
-  console.log(date);
   let dayNum = date.getDay();
 
   // update todays day
@@ -75,5 +74,18 @@ const displayDate = (weatherData) => {
       dayNum++;
     }
     day.textContent = days[dayNum];
+  });
+};
+
+export const displayForecast = (forecast) => {
+  let days = forecast.list;
+  console.log(days);
+  let i = 8;
+  daysTemp.forEach((day) => {
+    if (i > 39) {
+      i = 39;
+    }
+    day.textContent = Math.round(days[i].main.temp);
+    i += 8;
   });
 };
