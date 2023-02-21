@@ -25,7 +25,6 @@ const updateToday = (weatherData) => {
   // TODO: weather.icon ID
   feelsLike.textContent = Math.round(weatherData.main.feels_like);
   humidity.textContent = Math.round(weatherData.main.humidity);
-  // pop.textContent = weatherData.pop * 100;
   windSpeed.textContent = weatherData.wind.speed.toFixed(1);
 };
 
@@ -79,7 +78,8 @@ const displayDate = () => {
 
 export const displayForecast = (forecast) => {
   let days = forecast.list;
-  console.log(days);
+  pop.textContent = days[0].pop * 100;
+
   let i = 8;
   daysTemp.forEach((day) => {
     if (i > 39) {
