@@ -10,6 +10,9 @@ const month = document.getElementById("month");
 const monthDay = document.getElementById("date");
 const pop = document.getElementById("rain-chance");
 const daysTemp = document.querySelectorAll(".daily-temp");
+const dayBlock = document.querySelectorAll(".day-block");
+const daysIcon = document.querySelectorAll(".daily-img");
+const currentImg = document.querySelector(".condition-img");
 
 export const updateDisplay = (weatherData, forecast) => {
   displayDate();
@@ -20,9 +23,11 @@ export const updateDisplay = (weatherData, forecast) => {
 const updateToday = (weatherData) => {
   city.textContent = weatherData.name;
   mainTemp.textContent = Math.round(weatherData.main.temp);
+
   // TODO: dynamic unit measurement choice
   skyDescriptiton.textContent = weatherData.weather[0].description;
-  // TODO: weather.icon ID
+
+  currentImg.src = `../src/images/${weatherData.weather[0].icon}.svg`;
   feelsLike.textContent = Math.round(weatherData.main.feels_like);
   humidity.textContent = Math.round(weatherData.main.humidity);
   windSpeed.textContent = weatherData.wind.speed.toFixed(1);
@@ -55,7 +60,6 @@ const displayDate = () => {
   ];
 
   let date = new Date();
-
   let dayNum = date.getDay();
 
   // update todays day
@@ -77,15 +81,13 @@ const displayDate = () => {
 };
 
 export const displayForecast = (forecast) => {
-  let days = forecast.list;
-  pop.textContent = days[0].pop * 100;
+  let list = forecast.list;
+  pop.textContent = list[0].pop * 100;
 
-  let i = 8;
-  daysTemp.forEach((day) => {
-    if (i > 39) {
-      i = 39;
-    }
-    day.textContent = Math.round(days[i].main.temp);
+  let i = 6;
+  for (let day = 0; day < dayBlock.length; day++) {
+    daysTemp[day].textContent = Math.round(list[i].main.temp);
+    daysIcon[day].src = `../src/images/${list[i].weather[0].icon}.svg`;
     i += 8;
-  });
+  }
 };

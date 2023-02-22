@@ -1,5 +1,5 @@
 import "./main.css";
-import { getWeather, runSearch } from "./apps/fetch";
+import { runSearch } from "./apps/fetch";
 import { key } from "./apps/key";
 const form = document.querySelector(".search-form");
 const input = document.getElementById("input");
@@ -10,7 +10,7 @@ form.onsubmit = (e) => {
   e.preventDefault();
 };
 
-// TODO: find out how to get weather for whole week
+// TODO: find out how to get weather for whole week  -- DONE
 // TODO: find out the codes for icons
 // TODO: look into semantic html
-// TODO: find out how to get chance of rain
+// TODO: find out how to get chance of rain -- DONE
