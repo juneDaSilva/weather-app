@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,400;1,600;1,700;1,900&family=Roboto+Condensed:wght@300;400;700&family=Vollkorn:wght@500;700;800&display=swap"
+      rel="stylesheet">
+  <script defer src="main.js"></script></head>
+
+  <body>
+    <header>
+
+
+      <form class="search-form" action="">
+        <input id="input" type="text" placeholder="search location">
+        <button action="submit" class="searchBtn" alt="">
+          <img src="b1f781b99ceaafb9c831.svg">
+        </button>
+        <span class="error" aria-live="polite"></span>
+      </form>
+
+
+      <section class="measure-unit">
+        <p class="unit-label">℉/℃</p>
+        <label class="switch">
+          <input id="unit-switch" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+
+      </section>
+    </header>
+
+    <main>
+      <div class="daily-container">
+
+
+        <section class="today">
+          <h2 class="current-day">MONDAY</h2>
+          <div class="current-calendar">
+            <div class="calendar-date"><span id="month">March</span> <span id="date">21</span></div>
+          </div>
+          <div class="current-main">
+            <div class="main-left">
+              <div class="city">Paris</div>
+              <div class="temp-block">
+                <h1 id='main-temp' class="main-temp">26 </h1>
+                <h1 class="main-temp degree">℉</h1>
+              </div>
+              <div class="sky">partly cloudy</div>
+            </div>
+            <div class="main-right">
+              <img class="condition-img" src="5fc680889f90107bfae3.svg" alt="">
+            </div>
+          </div>
+          <div class="current-details">
+            <div class="details-block">
+              <div class="block-title">feels like</div>
+              <div class="temp-block">
+                <div class="block-info feel">13 </div>
+                <span class="block-info degree">℉</span>
+              </div>
+            </div>
+            <div class="details-block">
+              <div class="block-title">humidity</div>
+              <div class="block-info"> <span id="humidity">24</span>%</div>
+            </div>
+            <div class="details-block">
+              <div class="block-title">chance of rain</div>
+              <div class="block-info rain-chance"><span id="rain-chance">0</span>%</div>
+            </div>
+            <div class="details-block">
+              <div class="block-title">wind speed</div>
+              <div class="block-info wind-speed"><span id="wind-speed">16.7</span> <span id="speed-unit">km/h</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="days-container">
+          <div class="day-border"></div>
+          <div class="day-block">
+            <div class="days-name">TUE</div>
+            <div class="days-imgs">
+              <img class="daily-img" src="5fc680889f90107bfae3.svg" alt="">
+            </div>
+            <div class="days-temp">
+              <span id="day1" class="daily-temp">31</span>
+              <span class="degree">℉</span>
+            </div>
+          </div>
+          <div class="day-border"></div>
+
+          <div class="day-block">
+            <div class="days-name">WED</div>
+            <div class="days-imgs">
+              <img class="daily-img" src="5fc680889f90107bfae3.svg" alt="">
+            </div>
+            <div class="days-temp">
+              <span id="day2" class="daily-temp">31</span>
+              <span class="degree">℉</span>
+            </div>
+          </div>
+          <div class="day-border"></div>
+
+          <div class="day-block">
+            <div class="days-name">THU</div>
+            <div class="days-imgs">
+              <img class="daily-img" src="5fc680889f90107bfae3.svg" alt="">
+            </div>
+            <div class="days-temp">
+              <span id="day3" class="daily-temp">31</span>
+              <span class="degree">℉</span>
+            </div>
+          </div>
+          <div class="day-border"></div>
+
+          <div class="day-block">
+            <div class="days-name">FRI</div>
+            <div class="days-imgs">
+              <img class="daily-img" src="5fc680889f90107bfae3.svg" alt="">
+            </div>
+            <div class="days-temp">
+              <span id="day4" class="daily-temp">31</span>
+              <span class="degree">℉</span>
+            </div>
+          </div>
+          <div class="day-border"></div>
+
+          <div class="day-block">
+            <div class="days-name">SAT</div>
+            <div class="days-imgs">
+              <img class="daily-img" src="5fc680889f90107bfae3.svg" alt="">
+            </div>
+            <div class="days-temp">
+              <span id="day5" class="daily-temp">31</span>
+              <span class="degree">℉</span>
+            </div>
+          </div>
+          <div class="day-border"></div>
+        </section>
+      </div>
+
+
+
+
+      </div>
+      <div class="hourly-container"></div>
+    </main>
+  </body>
+</html>
