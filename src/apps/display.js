@@ -12,16 +12,17 @@ const pop = document.getElementById("rain-chance");
 const daysTemp = document.querySelectorAll(".daily-temp");
 const dayBlock = document.querySelectorAll(".day-block");
 const daysIcon = document.querySelectorAll(".daily-img");
+const inputError = document.querySelector(".error");
 const currentImg = document.querySelector(".condition-img");
 
 export const updateDisplay = (weatherData, forecast) => {
+  clearError();
   displayDate();
   updateToday(weatherData);
   displayForecast(forecast);
 };
 
 const updateToday = (weatherData) => {
-  console.log(weatherData);
   city.textContent = weatherData.name;
   mainTemp.textContent = Math.round(weatherData.main.temp);
 
@@ -91,4 +92,15 @@ export const displayForecast = (forecast) => {
     daysIcon[day].src = `../src/images/${list[i].weather[0].icon}.svg`;
     i += 8;
   }
+};
+
+export const showError = () => {
+  inputError.textContent =
+    'Location not found.\n\nPlease enter: "City", "City, State" or "City, Country".';
+  inputError.className = "error active";
+};
+
+export const clearError = () => {
+  inputError.textContent = "";
+  inputError.className = "error active";
 };

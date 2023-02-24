@@ -1,6 +1,6 @@
-import { updateDisplay } from "./display";
+import { updateDisplay, showError } from "./display";
 
-export let city = "";
+export let city = "paris";
 
 export function getWeather(location, key, unit) {
   return new Promise((resolve, reject) => {
@@ -42,6 +42,6 @@ export async function runSearch(location, key, unit) {
       city = location;
     })
     .catch((err) => {
-      console.log(err);
+      showError();
     });
 }

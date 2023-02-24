@@ -5,12 +5,10 @@ const degree = document.querySelectorAll(".degree");
 
 export const toggleSwitch = () => {
   changeUnit();
-  console.log(city);
   if (city != "") {
     runSearch(city, myKey, measurement);
   }
   displayUnit();
-  console.log("unit switched to ", measurement);
 };
 
 const changeUnit = () => {

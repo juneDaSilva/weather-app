@@ -1,14 +1,18 @@
 import "./main.css";
 import { runSearch } from "./apps/fetch";
 import { myKey } from "./apps/myKey";
-import { toggleSwitch } from "./apps/switch";
-import { measurement } from "./apps/switch";
+import { toggleSwitch, measurement } from "./apps/switch";
+import { showError } from "./apps/display";
 const form = document.querySelector(".search-form");
 const input = document.getElementById("input");
 const unitSwitch = document.getElementById("unit-switch");
 
 form.onsubmit = (e) => {
-  runSearch(input.value, myKey, measurement);
+  if (input.value != "") {
+    runSearch(input.value, myKey, measurement);
+  } else {
+    showError();
+  }
 
   e.preventDefault();
 };
@@ -19,6 +23,5 @@ unitSwitch.onclick = () => {
 
 // TODO: find out how to get weather for whole week  -- DONE
 // TODO: find out the codes for icons -- DONE
-// TODO: look into semantic html
 // TODO: find out how to get chance of rain -- DONE
-// TODO: dynamic unit measurement choice
+// TODO: dynamic unit measurement choice -- DONE
