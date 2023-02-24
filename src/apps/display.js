@@ -21,6 +21,7 @@ export const updateDisplay = (weatherData, forecast) => {
 };
 
 const updateToday = (weatherData) => {
+  console.log(weatherData);
   city.textContent = weatherData.name;
   mainTemp.textContent = Math.round(weatherData.main.temp);
 

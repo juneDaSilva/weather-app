@@ -17,21 +17,29 @@
 
 
       <form class="search-form" action="">
-        <input id="input" type="text" placeholder="search location">
+        <input id="input" type="search" placeholder="search location">
         <button action="submit" class="searchBtn" alt="">
           <img src="./images/search.svg">
         </button>
       </form>
 
+      <section class="measure-unit">
+        <p class="unit-label">℉/℃</p>
+        <label class="switch">
 
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+
+      </section>
     </header>
 
     <main>
       <div class="daily-container">
-        <!-- <div class="day-border"></div> -->
 
-        <div class="today">
-          <div class="current-day">MONDAY</div>
+
+        <section class="today">
+          <h2 class="current-day">MONDAY</h2>
           <div class="current-calendar">
             <div class="calendar-date"><span id="month">March</span> <span id="date">21</span></div>
           </div>
@@ -39,8 +47,8 @@
             <div class="main-left">
               <div class="city">Paris</div>
               <div class="temp-block">
-                <div id='main-temp' class="main-temp">26 </div>
-                <div class="main-temp degree">℉</div>
+                <h1 id='main-temp' class="main-temp">26 </h1>
+                <h1 class="main-temp degree">℉</h1>
               </div>
               <div class="sky">partly cloudy</div>
             </div>
@@ -70,10 +78,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
 
-        <div class="days-container">
+        <section class="days-container">
           <div class="day-border"></div>
           <div class="day-block">
             <div class="days-name">TUE</div>
@@ -134,7 +142,7 @@
             </div>
           </div>
           <div class="day-border"></div>
-        </div>
+        </section>
       </div>
 
 

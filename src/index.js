@@ -11,6 +11,7 @@ form.onsubmit = (e) => {
 };
 
 // TODO: find out how to get weather for whole week  -- DONE
-// TODO: find out the codes for icons
+// TODO: find out the codes for icons -- DONE
 // TODO: look into semantic html
 // TODO: find out how to get chance of rain -- DONE
+// TODO: dynamic unit measurement choice
