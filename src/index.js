@@ -10,6 +10,7 @@ const unitSwitch = document.getElementById("unit-switch");
 form.onsubmit = (e) => {
   if (input.value != "") {
     runSearch(input.value, myKey, measurement);
+    input.value = "";
   } else {
     showError();
   }
