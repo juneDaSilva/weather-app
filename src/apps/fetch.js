@@ -42,6 +42,7 @@ export async function runSearch(location, key, unit) {
       city = location;
     })
     .catch((err) => {
+      console.log(err);
       showError();
     });
 }
