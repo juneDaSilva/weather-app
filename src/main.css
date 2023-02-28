@@ -1,6 +1,4 @@
 * {
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-family: "Vollkorn", serif; */
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -27,7 +25,7 @@ header {
   position: relative;
 }
 
-input[type="text"] {
+#input {
   border: none;
   border-bottom: 2px solid black;
   width: 10rem;
@@ -36,7 +34,7 @@ input[type="text"] {
   letter-spacing: 1px;
 }
 
-input[type="text"]:focus {
+#input:focus {
   outline: none;
 }
 
