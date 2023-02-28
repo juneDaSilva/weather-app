@@ -311,10 +311,12 @@ h1 {
   flex: 4;
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 
 .daily-img {
-  width: 30px;
+  width: 45px;
+  align-self: center;
 }
 
 .days-temp {
