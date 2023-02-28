@@ -29,7 +29,8 @@ const updateToday = (weatherData) => {
   // TODO: dynamic unit measurement choice
   skyDescriptiton.textContent = weatherData.weather[0].description;
 
-  currentImg.src = `../src/images/${weatherData.weather[0].icon}.svg`;
+  // currentImg.src = `../images/${weatherData.weather[0].icon}.svg`;
+  currentImg.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`;
   feelsLike.textContent = Math.round(weatherData.main.feels_like);
   humidity.textContent = Math.round(weatherData.main.humidity);
   windSpeed.textContent = weatherData.wind.speed.toFixed(1);
@@ -89,7 +90,9 @@ export const displayForecast = (forecast) => {
   let i = 6;
   for (let day = 0; day < dayBlock.length; day++) {
     daysTemp[day].textContent = Math.round(list[i].main.temp);
-    daysIcon[day].src = `../src/images/${list[i].weather[0].icon}.svg`;
+    daysIcon[
+      day
+    ].src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`;
     i += 8;
   }
 };
