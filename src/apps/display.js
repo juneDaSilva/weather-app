@@ -28,8 +28,6 @@ const updateToday = (weatherData) => {
 
   // TODO: dynamic unit measurement choice
   skyDescriptiton.textContent = weatherData.weather[0].description;
-
-  // currentImg.src = `../images/${weatherData.weather[0].icon}.svg`;
   currentImg.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`;
   feelsLike.textContent = Math.round(weatherData.main.feels_like);
   humidity.textContent = Math.round(weatherData.main.humidity);
@@ -92,7 +90,7 @@ export const displayForecast = (forecast) => {
     daysTemp[day].textContent = Math.round(list[i].main.temp);
     daysIcon[
       day
-    ].src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`;
+    ].src = `https://openweathermap.org/img/wn/${list[i].weather[0].icon}@4x.png`;
     i += 8;
   }
 };
